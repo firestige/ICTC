@@ -4,7 +4,7 @@ import { http } from 'msw';
 // 定义 Mock 处理程序
 export const handlers = [
   // GET 请求示例
-  http.get('/api/data', ({ }) => {
+  http.get('/api/data', () => {
     return new Response(
       JSON.stringify({ message: 'Mock response from server' }),
       {
