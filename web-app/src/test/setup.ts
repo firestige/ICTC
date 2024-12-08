@@ -1,4 +1,4 @@
-import { server } from '@/mocks/server';
+import { server } from '@/test/mocks/server';
 
 // 启动 Mock Server
 beforeAll(() => server.listen({ onUnhandledRequest: 'warn' }));
