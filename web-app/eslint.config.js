@@ -15,7 +15,7 @@ export default tsESlint.config(
       sourceType: 'module',
       globals: {
         ...globals.browser,
-      }
+      },
     },
     plugins: {
       react,
@@ -28,7 +28,14 @@ export default tsESlint.config(
       sourceType: 'module',
     },
     rules: {
-      "indent": "error",
+      'indent': 'error',
+      '@typescript-eslint/no-unused-vars': ['error', {
+        'vars': 'all', // Check all variables
+        'varsIgnorePattern': '^_', // Ignore variables that start with "_"
+        'args': 'after-used', // Check arguments after the last used one
+        'argsIgnorePattern': '^_', // Ignore arguments that start with "_"
+        'ignoreRestSiblings': true, // Ignore unused variables from destructuring
+      }],
     },
-  }
+  },
 );
